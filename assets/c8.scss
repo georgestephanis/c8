@@ -1,0 +1,14 @@
+
+#c8-new-post {
+    textarea {
+        &:disabled {
+            opacity: 0.7;
+        }
+    }
+    button {
+        &:disabled {
+            opacity: 0.7;
+            cursor: default;
+        }
+    }
+}
