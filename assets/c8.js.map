@@ -1,0 +1,1 @@
+{"version":3,"sources":["c8.jsx"],"names":["jQuery","before"],"mappings":";;;AAOA,aALA,QAAA,aAOGA,OADA,sBAAsBC,OAAO","file":"c8.js","sourceRoot":"","sourcesContent":["\n\nimport './c8.scss'\n\n/**\n * Bootload in the stub for the new post\n */\n(function($) {\n\t$('.post.hentry:first').before('<div id=\"c8-new-post\">NEW POST EDITOR GOES HERE</div>');\n})(jQuery);\n"]}
