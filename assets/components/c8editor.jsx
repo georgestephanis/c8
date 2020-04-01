@@ -44,7 +44,7 @@ class C8Editor extends Component {
 		return (
 			<Fragment>
 				<TextareaControl
-					label="Content"
+					label="Write A New Post…"
 					value={ this.state.content }
 					disabled={ this.state.working }
 					onChange={ content => this.setState({ content }) }
