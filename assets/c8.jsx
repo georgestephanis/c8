@@ -1,48 +1,27 @@
 
 const {
-	Component,
-	Fragment,
 	render
 } = wp.element;
 
 const {
-	TextareaControl
 } = wp.components;
 
-import './c8.scss'
+import C8Editor from './components/c8editor';
 
-(function(wp, $) {
-	class C8Editor extends Component {
-		constructor( props ) {
-			super( props );
-			this.state = {
-				content: '',
-			};
-		}
+import './c8.scss';
 
-		render() {
-			return (
-				<Fragment>
-					<TextareaControl 
-						label="Content"
-						value={ this.state.content }
-						onChange={ content => this.setState({ content }) }
-					/>
-					<small>{ this.state.content }</small>
-				</Fragment>
-				
-			);
-		}
-	}
+function publishCallback( { content } ) {
+	console.log( content );
+	return true;
+}
 
-	/**
-	 * Bootload in the stub for the new post
-	 */
-	$('.post.hentry:first').before('<div id="c8-new-post">NEW POST EDITOR GOES HERE</div>');
+// Bootload in the stub for the new post
+const stub = document.createElement('div');
+stub.id = 'c8-new-post';
+document.querySelector('.post.hentry').before( stub );
 
-	render(
-		( <C8Editor /> ),
-		document.getElementById('c8-new-post')
-	);
-
-})(window.wp, jQuery);
+// Render the React component.
+render(
+	( <C8Editor publishCallback={ publishCallback } /> ),
+	stub
+);

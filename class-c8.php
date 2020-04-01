@@ -32,7 +32,6 @@ class C8 {
 			[
 				'wp-element',
 				'wp-components',
-				'jquery',
 			],
 			filemtime( __DIR__ . '/assets/c8.js' ),
 			true
