@@ -29,7 +29,11 @@ class C8 {
 		wp_register_script(
 			'c8',
 			plugins_url( 'assets/c8.js', __FILE__ ),
-			[ 'react', 'jquery' ],
+			[
+				'wp-element',
+				'wp-components',
+				'jquery',
+			],
 			filemtime( __DIR__ . '/assets/c8.js' ),
 			true
 		);
