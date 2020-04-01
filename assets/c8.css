@@ -1,2 +1,9 @@
+#c8-new-post textarea:disabled {
+  opacity: 0.7;
+}
+#c8-new-post button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
 
 /*# sourceMappingURL=c8.css.map */

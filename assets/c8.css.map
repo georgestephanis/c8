@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"c8.css","sourceRoot":""}
+{"version":3,"sources":["c8.scss"],"names":[],"mappings":"AAGQ;EACI;;AAIJ;EACI;EACA","file":"c8.css","sourceRoot":"","sourcesContent":["\n#c8-new-post {\n    textarea {\n        &:disabled {\n            opacity: 0.7;\n        }\n    }\n    button {\n        &:disabled {\n            opacity: 0.7;\n            cursor: default;\n        }\n    }\n}"]}
