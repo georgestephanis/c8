@@ -1,7 +1,8 @@
 {
 	"name": "c8",
 	"scripts": {
-		"build": "parcel build assets/c8.jsx --out-dir assets --public-url ."
+		"build": "parcel build assets/c8.jsx --out-dir assets --public-url .",
+		"watch": "parcel watch assets/c8.jsx --out-dir assets --public-url . --no-hmr"
 	},
 	"devDependencies": {
 		"parcel-bundler": "^1.10.1",
