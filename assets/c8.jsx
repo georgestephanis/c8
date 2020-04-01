@@ -1,5 +1,9 @@
 
 const {
+	Post
+} = wp.api.models;
+
+const {
 	render
 } = wp.element;
 
@@ -11,8 +15,13 @@ import C8Editor from './components/c8editor';
 import './c8.scss';
 
 function publishCallback( { content } ) {
-	console.log( content );
-	return true;
+	const newPost = new Post( {
+		content,
+		status: 'publish',
+	} );
+	newPost.save();
+
+	return newPost;
 }
 
 // Bootload in the stub for the new post

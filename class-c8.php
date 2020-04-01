@@ -30,6 +30,7 @@ class C8 {
 			'c8',
 			plugins_url( 'assets/c8.js', __FILE__ ),
 			[
+				'wp-api',
 				'wp-element',
 				'wp-components',
 			],
